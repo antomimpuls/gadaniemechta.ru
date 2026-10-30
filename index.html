@@ -34,12 +34,12 @@ const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Элеонора';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
-const WA_URL="https://wa.me/79675802551?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9C%D0%B5%D0%BB%D0%B8%D1%81%D1%81%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
-const FALLBACK_WA_URL="https://wa.me/79675802551?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9C%D0%B5%D0%BB%D0%B8%D1%81%D1%81%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const FALLBACK_WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
-const TELEGRAM_URL="https://t.me/gadanie0088?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%9C%D0%B5%D0%BB%D0%B8%D1%81%D1%81%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const TELEGRAM_URL="https://t.me/Eleonora003?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 const SITE_STATS_TRACKER_CONFIG = {
     projectUrl: "https://stats.72-56-243-254.sslip.io",
@@ -516,13 +516,13 @@ footer{background:#0e121d;padding:40px 0;text-align:center;border-top:1px solid 
 .studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://gadaniemechta.ru/photo-e7c6376837cb426ba72705c00ffc288c.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
 .hero-img #psychicImage{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
 </style>
-<!-- CONVERSIA_CONTACT_CONTRACT_V1 cf3bcab372379873f4df9925c566d5a51da0b1d3a8e4e809a5f3052788b72d10 -->
+<!-- CONVERSIA_CONTACT_CONTRACT_V1 a66f3e4d6a253a4c902cc37d1a2130252b120022d7e66dfa066add311cd28766 -->
 </head>
 <body>
 
 <div class="sticky-messengers" id="stickyMessengers">
-<a data-msg-url="https://wa.me/79675802551" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
-<a data-msg-url="https://t.me/gadanie0088" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
+<a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Чат в WhatsApp</a>
+<a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Написать в Telegram</a>
 </div>
 
 <section class="hero">
@@ -540,8 +540,8 @@ footer{background:#0e121d;padding:40px 0;text-align:center;border-top:1px solid 
 <div class="trust-item"><span style="font-size:1.5rem">📱</span><span style="font-size:0.85rem;font-weight:600">Ежедневная поддержка</span></div>
         </div>
         <div class="hero-cta">
-        <a data-msg-url="https://wa.me/79675802551" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
-        <a data-msg-url="https://t.me/gadanie0088" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
+        <a data-msg-url="https://wa.me/79175880592" class="btn btn-wa" target="_blank" rel="noopener" data-wa="true">📲 Написать в WhatsApp</a>
+        <a data-msg-url="https://t.me/Eleonora003" class="btn btn-tg" target="_blank" rel="noopener" data-telegram="true">✈ Связаться в Telegram</a>
         </div>
         </div>
         <div>
@@ -941,7 +941,7 @@ footer{background:#0e121d;padding:40px 0;text-align:center;border-top:1px solid 
         <p>ОГРНИП: 325774600019856</p>
         <p>ИНН: 773401256734</p>
         <p>Адрес: 123112, г. Москва, Пресненская наб., д. 8, офис 1205</p>
-        <p>Телефон: +7 (967) 580-25-51</p>
+        <p>Телефон: +7 (917) 588-05-92</p>
         <p>Email: info@gadaniemechta.ru</p>
         </div>
         <p style="font-size:0.9rem;color:#9ba1bc;font-style:italic;margin-bottom:30px">Дата последнего обновления: 5 ноября 2025 года</p>
@@ -976,7 +976,7 @@ footer{background:#0e121d;padding:40px 0;text-align:center;border-top:1px solid 
 <p>Пишите на контактный email, указанный ниже.</p>
         <h2>8. Контактная информация</h2>
         <div class="company-info">
-        <p>Телефон: <a href="tel:+79675802551" style="color:#33d0bd;text-decoration:none">+7 (967) 580-25-51</a></p>
+        <p>Телефон: <a href="tel:+79175880592" style="color:#33d0bd;text-decoration:none">+7 (917) 588-05-92</a></p>
         <p>Email: <a href="mailto:info@gadaniemechta.ru" style="color:#33d0bd;text-decoration:none">info@gadaniemechta.ru</a></p>
         <p>Сайт: <a href="https://gadaniemechta.ru/" style="color:#33d0bd;text-decoration:none" target="_blank">https://gadaniemechta.ru</a></p>
         </div>
