@@ -11,8 +11,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Philosopher:wght@700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>
 const SITE_SETTINGS = {
-  'phoneNumber': '+79175880592',
-  'psychicName': 'Элеонора',
+  'phoneNumber': '+79036728688',
+  'psychicName': 'Нина',
   'city': 'Краснодар',
   'address': 'г. Москва, ул. Северная, д. 324, офис 45',
   'enableRedirect': false,
@@ -21,16 +21,16 @@ const SITE_SETTINGS = {
   'siteUrl': 'https://gadaniemechta.ru/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
   'telegramEnabled': true,
-  'telegramNickname': 'Eleonora003',
+  'telegramNickname': 'NineMag7771',
   'yandexMetrikaId': '113163335',
   'psychicImageURL': 'https://gadaniemechta.ru/photo-e7c6376837cb426ba72705c00ffc288c.jpg',
   'workingHours': 'ежедневно 08:30-21:30',
   'responseTime': '6-14 минут',
   'metrikaMessengerVisible': false,
   'maxEnabled': false,
-  'maxUrl': ""
+  'maxUrl': ''
 };
-const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Элеонора';
+const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Нина';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
@@ -1253,7 +1253,7 @@ function replaceNamePlaceholders(name){
 }
 
 function setImagesAndTexts(){
-    const psychicName = SETTINGS.psychicName || 'Элеонора';
+    const psychicName = SETTINGS.psychicName || 'Нина';
     replaceNamePlaceholders(psychicName);
     const heroName = document.getElementById('heroName');
     if (heroName) {
